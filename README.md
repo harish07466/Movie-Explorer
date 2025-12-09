@@ -10,7 +10,7 @@ An elegant and interactive movie discovery web app built with **React + OMDB API
 
 ## 🚀 **Live Demo**
 
-🔗 **[https://movie-explorer-hk.netlify.app/](https://movie-explorer-hk.netlify.app/)**
+🔗 **https://movie-explorer-56q.pages.dev/**
 
 ---
 
