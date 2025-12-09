@@ -10,8 +10,7 @@ An Elegant and Interactive Movie Discovery Web App built with **React + OMDB API
 
 ## 🚀 **Live Demo**
 
-🔗 _Add your deployed link here (Netlify)_
-`https://your-movie-explorer.vercel.app/`
+🔗 `https://movie-explorer-hk.netlify.app/`
 
 ---
 
