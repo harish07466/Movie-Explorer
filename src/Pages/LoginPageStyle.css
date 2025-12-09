@@ -1,0 +1,223 @@
+/* ===== Login Page Styling ===== */
+
+/* ===== Login Page Background (Mobile Safe) ===== */
+.login-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevents white edges */
+}
+
+/* Fullscreen animated background layer */
+.login-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("../assets/LoginPageBG.png") no-repeat center center;
+  background-size: cover;
+
+  /* Cinematic zoom animation */
+  animation: bgZoom 18s ease-in-out infinite;
+
+  /* push under content */
+  z-index: -1;
+}
+
+/* Zoom animation */
+@keyframes bgZoom {
+  0% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Fade-in effect (optional) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.login-card {
+  width: px;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Movie Explorer title - same color, enhanced style */
+.login-title {
+  font-family: "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: inline-block;
+  color: rgb(255, 115, 0);
+
+  /* Gentle float animation */
+  animation: titleFloat 3s ease-in-out infinite;
+}
+
+@keyframes titleFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Interactive animated "Login" text */
+.login-subtitle {
+  font-family: "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+
+  /* Animated gradient */
+  background: linear-gradient(
+    90deg,
+    #00eaff,
+    #00c6ff,
+    #009dff,
+    #00c6ff,
+    #00eaff
+  );
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* Glow */
+  text-shadow: 0 0 6px rgba(0, 200, 255, 0.35), 0 0 12px rgba(0, 170, 255, 0.25);
+
+  /* Animation */
+  animation: neonFlow 4s ease-in-out infinite;
+}
+
+@keyframes neonFlow {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 150%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+/* Input Styling */
+.login-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-card input:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Placeholder */
+.login-card input::placeholder {
+  color: #ddd;
+}
+
+/* Password Wrapper */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 18px;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.eye-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Button */
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: none;
+  background: #ff4c60;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  background: #ff2a45;
+  transform: translateY(-2px);
+}
+
+/* Error Text */
+.error-text {
+  color: #ff6b6b;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
