@@ -3,7 +3,7 @@
 An Elegant and Interactive Movie Discovery Web App built with **React + OMDB API + YouTube API**, featuring secure login, real-time movie search, trailers, songs, and a fully cinematic UI with animations.
 
 <p align="center">
-  <img src="../ProjectScreenShot/Login_Page.png" width="850" />
+  <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/MoviesPage.png" width="850" />
 </p>
 
 ---
@@ -35,14 +35,22 @@ Movie Explorer is designed to give users a **premium OTT-style experience** with
 - Auto-expiry after **24 hours**
 - Protected movie routes
 
+### **🔐 Login Page**
+
+<p align="center">
+  <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Login_Page.png" width="850" />
+</p>
+
 ### 🎞 **2. Movie Search**
 
 - Search movies using the OMDB API
 - Instant results with fallback messages
 - Smooth UI animations
 
+### **🎞 Movie List**
+
 <p align="center">
-  <img src="../Movies_List.png" width="850" />
+  <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Movies_List.png" width="850" />
 </p>
 
 ### 🎬 **3. Movie Details Page**
@@ -52,8 +60,10 @@ Movie Explorer is designed to give users a **premium OTT-style experience** with
 - Genre, Actors, Ratings
 - Dynamic color UI
 
+### **📘 Movie Detail Card**
+
 <p align="center">
-  <img src="../assets/ProjectScreenShoots/Movie_Detail.png" width="850" />
+  <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Movie_Detail.png" width="850" />
 </p>
 
 ### ▶ **4. Auto-Language Trailer Finder (YouTube API)**
@@ -62,8 +72,10 @@ Movie Explorer is designed to give users a **premium OTT-style experience** with
 - Auto-play embedded YouTube player
 - Neon 4K player highlight effect
 
+### **▶ Trailer Player**
+
 <p align="center">
-  <img src="../assets/ProjectScreenShoots/Trailer_Play.png" width="850" />
+  <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Trailer_Play.png" width="850" />
 </p>
 
 ### 🎵 **5. Intelligent Songs Finder**
@@ -73,8 +85,10 @@ Movie Explorer is designed to give users a **premium OTT-style experience** with
 - Auto-play first song
 - Clean vertical song list
 
+### **🎵 Songs Panel**
+
 <p align="center">
-  <img src="../assets/ProjectScreenShoots/Movie_Songs.png" width="850" />
+  <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Movie_Songs.png" width="850" />
 </p>
 
 ### 💎 **6. Premium UI & Animations**
@@ -169,40 +183,6 @@ npm run build
   }
 ]
 ```
-
----
-
-## 📸 **Screenshots**
-
-### **🔐 Login Page**
-
-<p align="center">
-  <img src="YOUR_LOGIN_PAGE_IMAGE_URL" width="800">
-</p>
-
-### **🎞 Movie List**
-
-<p align="center">
-  <img src="YOUR_MOVIES_LIST_IMAGE_URL" width="800">
-</p>
-
-### **📘 Movie Detail Card**
-
-<p align="center">
-  <img src="YOUR_MOVIE_DETAIL_IMAGE_URL" width="800">
-</p>
-
-### **🎵 Songs Panel**
-
-<p align="center">
-  <img src="YOUR_MOVIE_SONGS_IMAGE_URL" width="800">
-</p>
-
-### **▶ Trailer Player**
-
-<p align="center">
-  <img src="YOUR_TRAILER_PLAY_IMAGE_URL" width="800">
-</p>
 
 ---
 
