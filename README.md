@@ -127,11 +127,6 @@ Movie Explorer gives users a **premium OTT-style experience**, delivering:
 ---
 
 # 📁 **Project Structure**
-
-<p align="center">
-  <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Project_Structure.png" width="850" />
-</p>
-
 ```
 movie-explorer/
 │
