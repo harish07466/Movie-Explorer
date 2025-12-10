@@ -44,7 +44,7 @@ You can proceed safely by clicking:
 
 Advanced → Proceed to site
        or
-Click on "Details" -> You will see this line "Only visit <u> this unsafe site </u> if you're sure you understand the risks.", Click On the Underlined One.
+Click on "Details" -> You will see this line "Only visit <u> 'this unsafe site' </u> if you're sure you understand the risks.", Click On the Underlined One.
 
 This is only required during the early verification period of the domain.
 
