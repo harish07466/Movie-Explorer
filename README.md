@@ -222,6 +222,6 @@ MIT License — free to use and modify.
 # ❤️ **Author**
 
 **Harish Kumbar**
-Built with passion for cinema & modern UI development.
+<p>Built with passion for cinema & modern UI development.</p>
 
 ---
