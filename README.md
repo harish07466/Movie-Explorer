@@ -11,7 +11,7 @@ An elegant and interactive movie discovery web app built with **React + OMDB API
 ## 🚀 **Live Demo**
 
 🔗 **https://movie-explorer-56q.pages.dev/**
-
+---
 ⚠️ Chrome Warning Notice (Safe to Ignore)
 
 When previewing this project, Google Chrome may display a “Dangerous Site” or “Deceptive Site Ahead” warning.
