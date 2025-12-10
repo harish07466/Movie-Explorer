@@ -44,7 +44,7 @@ You can proceed safely by clicking:
 
 Advanced → Proceed to site 
 <br>
-       or
+     <center> Or </center>
 <br>
 Click on "Details" -> You will see this line "Only visit <u> 'this unsafe site' </u> if you're sure you understand the risks.", Click On the Underlined One.
 
