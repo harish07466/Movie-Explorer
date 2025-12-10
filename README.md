@@ -31,9 +31,9 @@ The SSL certificate is valid, but the domain reputation is still building, which
 
 ✔️ No personal data is collected
 ✔️ No backend or database is connected
-✔️ The login page is UI-only (for demonstration)
+✔️ The login page is UI-only (for demonstration purposes)
 ✔️ All code runs entirely in the browser
-✔️ SSL certificate is valid and secure
+✔️ The SSL certificate is valid and secure
 
 This project is 100% safe to open, and the warning will automatically disappear as the domain gains trust over time.
 
