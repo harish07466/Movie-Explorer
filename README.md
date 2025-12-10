@@ -27,13 +27,14 @@ Chrome automatically flags new domains with password fields, even if they are co
 
 The SSL certificate is valid, but the domain reputation is still building, which is normal for newly deployed apps.
 
-🛡️ Safety Assurance
+## 🛡️ Safety Assurance
 
-✔️ No personal data is collected
-✔️ No backend or database is connected
-✔️ The login page is UI-only (for demonstration purposes)
-✔️ All code runs entirely in the browser
-✔️ The SSL certificate is valid and secure
+✔️ **No personal data is collected**<br>
+✔️ **No backend or database is connected**<br>
+✔️ **The login page is UI-only (for demonstration purposes)**<br>
+✔️ **All code runs entirely in the browser**<br>
+✔️ **The SSL certificate is valid and secure**
+
 
 This project is 100% safe to open, and the warning will automatically disappear as the domain gains trust over time.
 
