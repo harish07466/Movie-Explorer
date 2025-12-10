@@ -42,8 +42,10 @@ This project is 100% safe to open, and the warning will automatically disappear 
 
 You can proceed safely by clicking:
 
-Advanced → Proceed to site
+Advanced → Proceed to site 
+<br>
        or
+<br>
 Click on "Details" -> You will see this line "Only visit <u> 'this unsafe site' </u> if you're sure you understand the risks.", Click On the Underlined One.
 
 This is only required during the early verification period of the domain.
