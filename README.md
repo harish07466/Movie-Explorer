@@ -1,6 +1,6 @@
 # 🎬 **Movie Explorer — React Movie Search & Media Hub**
 
-An Elegant and Interactive Movie Discovery Web App built with **React + OMDB API + YouTube API**, featuring secure login, real-time movie search, trailers, songs, and a fully cinematic UI with animations.
+An elegant and interactive movie discovery web app built with **React + OMDB API + YouTube API**, featuring secure login, real-time movie search, trailers, songs, and a cinematic animated UI.
 
 <p align="center">
   <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/MoviesPage.png" width="850" />
@@ -10,30 +10,69 @@ An Elegant and Interactive Movie Discovery Web App built with **React + OMDB API
 
 ## 🚀 **Live Demo**
 
-🔗 _Add your deployed link here (Netlify)_
-`https://your-movie-explorer.vercel.app/`
+## 🔗 **https://movie-explorer-56q.pages.dev/**
+
+⚠️ Chrome Warning Notice (Safe to Ignore)
+
+When previewing this project, Google Chrome may display a “Dangerous Site” or “Deceptive Site Ahead” warning.
+This does NOT mean the site is unsafe — it is a false precaution flag caused by the following reasons:
+
+🔍 Why Chrome Shows This Warning
+
+The project is hosted on a new Cloudflare Pages subdomain, which has no established trust yet.
+
+The app includes a login UI, even though it is a frontend-only demo without real authentication.
+
+Chrome automatically flags new domains with password fields, even if they are completely harmless.
+
+The SSL certificate is valid, but the domain reputation is still building, which is normal for newly deployed apps.
+
+## 🛡️ Safety Assurance
+
+✔️ **No personal data is collected**<br>
+✔️ **No backend or database is connected**<br>
+✔️ **The login page is UI-only (for demonstration purposes)**<br>
+✔️ **All code runs entirely in the browser**<br>
+✔️ **The SSL certificate is valid and secure**
+
+This project is 100% safe to open, and the warning will automatically disappear as the domain gains trust over time.
+
+🚀 If Chrome Shows the Warning
+
+You can proceed safely by clicking:
+
+Advanced → Proceed to site
+<br>
+
+<center> Or </center>
+<br>
+Click on "Details" -> You will see this line "Only visit <u> 'this unsafe site' </u> if you're sure you understand the risks.", Click On the Underlined One.
+
+This is only required during the early verification period of the domain.
 
 ---
 
-## 🏆 **Why Movie Explorer?**
+# 🏆 **Why Movie Explorer?**
 
-Movie Explorer is designed to give users a **premium OTT-style experience** with:
+Movie Explorer gives users a **premium OTT-style experience**, delivering:
 
-✨ Animated UI
-✨ Rich search experience
-✨ Multi-language trailer + song detection
-✨ Secure session-based login
-✨ Responsive layout for all devices
+- ✨ Animated UI
+- ✨ Rich movie search
+- ✨ Auto language-based trailer & songs
+- ✨ Secure session-based login
+- ✨ Fully responsive UI
 
 ---
 
-## 🌟 **Key Features**
+# 🌟 **Key Features**
 
-### 🔐 **1. Login & Auth**
+---
 
-- User authentication with encrypted **Base64 session storage**
-- Auto-expiry after **24 hours**
-- Protected movie routes
+## 🔐 **1. Login & Authentication**
+
+- Encrypted Base64 session storage
+- Auto session expiry (24 hours)
+- Complete protected routing
 
 ### **🔐 Login Page**
 
@@ -41,11 +80,13 @@ Movie Explorer is designed to give users a **premium OTT-style experience** with
   <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Login_Page.png" width="850" />
 </p>
 
-### 🎞 **2. Movie Search**
+---
 
-- Search movies using the OMDB API
-- Instant results with fallback messages
-- Smooth UI animations
+## 🎞 **2. Movie Search System**
+
+- Search movies instantly via OMDB API
+- Styled search UI with hover/zoom effects
+- Friendly fallback messages
 
 ### **🎞 Movie List**
 
@@ -53,12 +94,15 @@ Movie Explorer is designed to give users a **premium OTT-style experience** with
   <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Movies_List.png" width="850" />
 </p>
 
-### 🎬 **3. Movie Details Page**
+---
 
-- Full plot
-- Poster
-- Genre, Actors, Ratings
-- Dynamic color UI
+## 🎬 **3. Detailed Movie Information**
+
+- Full Plot
+- Poster Preview
+- Genre, Actors, Release Date
+- IMDb Ratings
+- Cleanly structured detail layout
 
 ### **📘 Movie Detail Card**
 
@@ -66,11 +110,13 @@ Movie Explorer is designed to give users a **premium OTT-style experience** with
   <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Movie_Detail.png" width="850" />
 </p>
 
-### ▶ **4. Auto-Language Trailer Finder (YouTube API)**
+---
 
-- Smart trailer search prioritizing **original language**
+## ▶ **4. Auto-Language Trailer Finder (YouTube API)**
+
+- Searches trailers prioritizing **original movie language**
 - Auto-play embedded YouTube player
-- Neon 4K player highlight effect
+- Neon glowing player border effect
 
 ### **▶ Trailer Player**
 
@@ -78,12 +124,14 @@ Movie Explorer is designed to give users a **premium OTT-style experience** with
   <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Trailer_Play.png" width="850" />
 </p>
 
-### 🎵 **5. Intelligent Songs Finder**
+---
 
-- Detects original movie language
-- Ranks and filters songs accordingly
-- Auto-play first song
-- Clean vertical song list
+## 🎵 **5. Smart Songs Finder (YouTube API)**
+
+- Detects original language
+- Ranks songs accordingly
+- Auto-plays first result
+- Clean song list UI
 
 ### **🎵 Songs Panel**
 
@@ -91,29 +139,32 @@ Movie Explorer is designed to give users a **premium OTT-style experience** with
   <img src="https://github.com/harish07466/Movie-Explorer/blob/main/src/assets/ProjectScreenShoots/Movie_Songs.png" width="850" />
 </p>
 
-### 💎 **6. Premium UI & Animations**
+---
 
-- Cinematic background with **zoom animation**
-- Crystal-clear glassmorphism login card
-- Neon borders for media player
-- Responsive for desktop & mobile
+## 💎 **6. Premium UI & Animations**
+
+- Cinematic background zoom animation
+- Glass-morphism login card
+- Gold animated title text
+- Neon-pulse media player
+- Fully mobile-responsive layout
 
 ---
 
-## 🧰 **Tech Stack**
+# 🧰 **Tech Stack**
 
-| Category          | Tools                                   |
-| ----------------- | --------------------------------------- |
-| **Frontend**      | React.js, JSX, CSS3                     |
-| **Routing**       | React Router v6                         |
-| **APIs**          | OMDB API, YouTube Data API v3           |
-| **Auth Handling** | LocalStorage (Encrypted Base64 Session) |
-| **Bundler**       | Vite                                    |
-| **Deployment**    | Netlify                                 |
+| Category           | Tools                         |
+| ------------------ | ----------------------------- |
+| **Frontend**       | React.js, JSX, CSS3           |
+| **Routing**        | React Router v6               |
+| **APIs**           | OMDB API, YouTube Data API v3 |
+| **Authentication** | Encrypted Base64 Sessions     |
+| **Bundler**        | Vite                          |
+| **Hosting**        | Netlify                       |
 
 ---
 
-## 📁 **Project Structure**
+# 📁 **Project Structure**
 
 ```
 movie-explorer/
@@ -133,14 +184,12 @@ movie-explorer/
 │   ├── main.jsx
 │   └── ProtectedRoute.jsx
 │
-├── .env
-├── package.json
 └── vite.config.js
 ```
 
 ---
 
-## 🔧 **Environment Setup**
+# 🔧 **Environment Setup**
 
 Create a `.env` file:
 
@@ -151,7 +200,7 @@ VITE_YOUTUBE_API_KEY=YOUR_YOUTUBE_KEY
 
 ---
 
-## 🚀 **Running the Project**
+# 🚀 **Running the Project**
 
 ### 1️⃣ Install dependencies
 
@@ -159,7 +208,7 @@ VITE_YOUTUBE_API_KEY=YOUR_YOUTUBE_KEY
 npm install
 ```
 
-### 2️⃣ Start development server
+### 2️⃣ Start dev server
 
 ```sh
 npm run dev
@@ -173,7 +222,7 @@ npm run build
 
 ---
 
-## 🧪 **Test Users (user.json)**
+# 🧪 **Test User (from user.json)**
 
 ```
 [
@@ -186,32 +235,33 @@ npm run build
 
 ---
 
-## 🛠 **Future Enhancements**
+# 🛠 **Future Enhancements**
 
-✔ Dark/Light mode
-✔ User profile & favorites list
-✔ Trending movies section
-✔ Multi-language UI
-✔ Better recommendation engine
-
----
-
-## 🤝 **Contributing**
-
-Feel free to submit issues or pull requests.
-Contributions are always welcome!
+- ✔ Light / Dark mode
+- ✔ User favorites list
+- ✔ Trending movies section
+- ✔ Multi-language UI
+- ✔ Smarter recommendation engine
 
 ---
 
-## 📜 **License**
+# 🤝 **Contributing**
+
+Issues and PRs are welcome.
+Feel free to improve UI, code logic, or add features!
+
+---
+
+# 📜 **License**
 
 MIT License — free to use and modify.
 
 ---
 
-## ❤️ **Author**
+# ❤️ **Author**
 
 **Harish Kumbar**
-Built with passion for movies & React development.
+
+<p>Built with passion for cinema & modern UI development.</p>
 
 ---
