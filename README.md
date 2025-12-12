@@ -10,22 +10,13 @@ An elegant and interactive movie discovery web app built with **React + OMDB API
 
 ## 🚀 **Live Demo**
 
-## 🔗 **https://movie-explorer-56q.pages.dev/**
+## 🔗 **https://movie-explorer-hk.pages.dev/**
 
-⚠️ Chrome Warning Notice (Safe to Ignore)
+‼️IMPORTANT‼️
 
-When previewing this project, Google Chrome may display a “Dangerous Site” or “Deceptive Site Ahead” warning.
-This does NOT mean the site is unsafe — it is a false precaution flag caused by the following reasons:
-
-🔍 Why Chrome Shows This Warning
-
-The project is hosted on a new Cloudflare Pages subdomain, which has no established trust yet.
-
-The app includes a login UI, even though it is a frontend-only demo without real authentication.
-
-Chrome automatically flags new domains with password fields, even if they are completely harmless.
-
-The SSL certificate is valid, but the domain reputation is still building, which is normal for newly deployed apps.
+<h3>The Webiste is Safe</h3>
+<h4>© 2025 Movie Explorer — Personal Project.<h4>
+<p>Not Affiliated with any Streaming Service.<p>
 
 ## 🛡️ Safety Assurance
 

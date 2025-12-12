@@ -1,10 +1,11 @@
-/* ====================== BACKGROUND (same as v1, kept safe) ====================== */
+/* ====================== BACKGROUND ====================== */
 
 .login-container {
   position: relative;
   min-height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column; /* SO FOOTER STAYS AT BOTTOM NATURALLY */
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -17,10 +18,7 @@
   background: url("../assets/LoginPageBG.png") no-repeat center center;
   background-size: cover;
   animation: bgZoom 18s ease-in-out infinite;
-
-  /* Slight dim for clarity */
   filter: brightness(0.75);
-
   z-index: -2;
 }
 
@@ -36,7 +34,7 @@
   }
 }
 
-/* ====================== NEW 2.0 SPOTLIGHT LAYER ====================== */
+/* ====================== SPOTLIGHT LAYER ====================== */
 
 .login-container::after {
   content: "";
@@ -44,15 +42,14 @@
   width: 700px;
   height: 700px;
 
-  /* Almost fully transparent glow */
   background: radial-gradient(
     circle,
     rgba(0, 255, 255, 0.03),
-    /* extremely faint aqua */ rgba(0, 0, 0, 0)
+    rgba(0, 0, 0, 0)
   );
 
-  filter: blur(150px); /* smoothest blur */
-  opacity: 0.08; /* almost invisible */
+  filter: blur(150px);
+  opacity: 0.08;
 
   animation: spotlightMove 20s ease-in-out infinite alternate;
   z-index: -1;
@@ -67,11 +64,12 @@
   }
 }
 
-/* ====================== LOGIN CARD — Professional Clean ====================== */
+/* ====================== LOGIN CARD ====================== */
 
 .login-card {
-  width: 450px;
-  padding: 45px 45px;
+  width: 90%; /* MOBILE FRIENDLY */
+  max-width: 450px; /* DESKTOP SIZE CONTROL */
+  padding: 45px 35px; /* reduced slightly for mobile */
   border-radius: 22px;
 
   /* Clean, high-clarity background */
@@ -87,6 +85,10 @@
 
   text-align: center;
   transition: 0.25s ease;
+
+  animation: fadeInCard 0.7s ease-out;
+
+  margin: 20px auto; /* centers on all screens */
 }
 
 /* Remove 3D Hover */
@@ -109,17 +111,13 @@
   }
 }
 
-/* ====================== CLEAN BORDER (STATIC, NO ROTATION) ====================== */
-
+/* Border */
 .login-card::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 22px;
-
-  /* Static soft gradient border */
   border: 2px solid rgba(120, 180, 255, 0.35);
-
   pointer-events: none;
 }
 
@@ -130,17 +128,14 @@
   font-size: 32px;
   font-weight: 800;
 
-  /* Premium gold gradient */
   background: linear-gradient(90deg, #ffd26a, #ffca47, #ffdf82);
-  background-clip: text; /* Standard */
-  -webkit-background-clip: text; /* Chrome, Safari */
+  background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 
   letter-spacing: 1.3px;
-  margin-bottom: 5px;
 }
 
-/* Subtitle */
 .login-subtitle {
   font-family: "Times New Roman", serif;
   font-size: 22px;
@@ -149,16 +144,17 @@
   margin-bottom: 28px;
 }
 
-/* ====================== INPUT FIELDS ====================== */
+/* ====================== INPUTS ====================== */
 
 .login-card input {
   width: 100%;
   padding: 13px 16px;
   margin: 14px 0;
   border-radius: 12px;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.22);
+
   background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
 
   color: #f3feff;
   transition: 0.25s ease;
@@ -170,7 +166,7 @@
   box-shadow: 0 0 10px rgba(0, 180, 255, 0.35);
 }
 
-/* Eye Icon */
+/* Password icon */
 .password-wrapper {
   position: relative;
 }
@@ -182,15 +178,15 @@
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 19px;
-  color: #ffffff;
-  transition: 0.25s ease;
+  color: white;
+  transition: 0.25s;
 }
 
 .eye-icon:hover {
   transform: translateY(-50%) scale(1.15);
 }
 
-/* ====================== BUTTON (Minimal, Clean) ====================== */
+/* ====================== BUTTON ====================== */
 
 .login-card button {
   width: 100%;
@@ -199,7 +195,6 @@
 
   background: linear-gradient(135deg, #69a9ff, #417bff);
   color: white;
-
   border: none;
   border-radius: 14px;
 
@@ -213,7 +208,7 @@
   background: linear-gradient(135deg, #7bb8ff, #4f89ff);
 }
 
-/* Smooth Shimmer Hover Effect */
+/* shimmer */
 .login-card::after {
   content: "";
   position: absolute;
@@ -245,49 +240,76 @@
   margin-top: 18px;
   color: #ff8b8b;
   font-weight: 600;
-  letter-spacing: 0.4px;
 }
 
+/* ====================== FOOTER (NORMAL FLOW, NOT FIXED) ====================== */
 .footer-note {
-  font-family: "Times New Roman", Times, serif;
-  position: fixed;
-  bottom: 18px;
-  left: 50%;
-  transform: translateX(-50%);
-
+  font-family: "Times New Roman", serif;
   font-size: 14px;
-  color: #e8f1ff; /* soft white-blue */
+  color: #e8f1ff;
   opacity: 0.85;
+
   text-align: center;
   line-height: 1.45;
 
-  padding: 8px 20px;
-  border-radius: 14px;
+  /* Center alignment */
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-  /* subtle glass look */
-  background: rgba(20, 26, 40, 0.45);
-  backdrop-filter: blur(12px) saturate(150%);
+  padding: 18px 0;
 
-  /* premium soft glow */
-  box-shadow: 0 0 10px rgba(120, 160, 255, 0.35),
-    0 0 25px rgba(80, 130, 255, 0.2);
+  /* Dark cinematic background */
+  background: rgba(10, 12, 20, 0.8);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
 
-  /* smooth fade-in */
-  animation: footerFade 1.8s ease-out;
+  /* Soft glow */
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.55),
+    0 0 12px rgba(120, 125, 255, 0.25);
+
+  /* Smooth fade */
+  animation: footerFade 1.4s ease-out;
+}
+
+.footer-note:hover {
+  color: greenyellow;
 }
 
 @keyframes footerFade {
   0% {
     opacity: 0;
-    transform: translateX(-50%) translateY(10px);
+    transform: translateY(10px);
   }
   100% {
     opacity: 0.85;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
   }
 }
 
-.footer-note:hover {
-  color: orangered;
-  border-color: #00caff;
+/* ====================== MOBILE RESPONSIVE FIXES ====================== */
+
+@media (max-width: 480px) {
+  .login-card {
+    width: 92%;
+    max-width: 360px;
+    padding: 30px 24px;
+    margin-top: 60px;
+    margin-bottom: 140px; /* Extra space for footer */
+    border-radius: 18px;
+  }
+
+  .footer-note {
+    font-size: 12px;
+    padding: 10px 16px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    width: 85%;
+    max-width: 420px;
+    padding: 40px 30px;
+  }
 }

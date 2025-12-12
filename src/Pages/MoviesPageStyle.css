@@ -11,9 +11,10 @@
   min-height: 100vh;
   background: url("../assets/LoginPageBG.png") no-repeat center center/cover;
   padding: 20px;
+
+  /* NEW FIX */
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column; /* stack content + footer */
 }
 
 /* ====================== Movie Page Styling ==================*/
@@ -25,6 +26,7 @@
   color: #f8f8f8cf;
   position: relative;
   padding-bottom: 40px;
+  flex: 1; /* fills remaining page height, pushes footer down */
 }
 
 /* Header */
@@ -490,5 +492,69 @@
 
   .iframe-wrap iframe {
     height: 40vh;
+  }
+}
+
+/* ---------------- FULL PAGE SCROLL LAYOUT ---------------- */
+
+.movie-scroll-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  /* This allows scrolling and pushes footer to bottom */
+}
+
+/* Content grows normally */
+#moviePage {
+  flex: 1;
+}
+
+/* ---------------- PREMIUM FOOTER (Not fixed) ---------------- */
+
+.page-footer {
+  width: 100%;
+  text-align: center;
+
+  font-family: "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #e8f1ff;
+  opacity: 0.85;
+
+  padding: 16px 0;
+  margin-top: 40px; /* spacing above footer */
+
+  /* Luxury dark glass look */
+  background: rgba(10, 12, 20, 0.75);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.45),
+    0 0 12px rgba(120, 160, 255, 0.22);
+
+  animation: footerFade 1.2s ease-out;
+}
+
+/* Smooth fade-in when footer becomes visible */
+@keyframes footerFade {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+@media (max-width: 500px) {
+  .page-footer {
+    font-size: 12px;
+    padding: 14px 0;
   }
 }

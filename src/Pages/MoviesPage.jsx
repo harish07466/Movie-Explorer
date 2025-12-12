@@ -403,6 +403,12 @@ function MoviesPage() {
           </div>
         )}
       </div>
+      {/* FOOTER at bottom only when scrolled */}
+      <footer className="footer-note page-footer">
+        © 2025 Movie Explorer — Personal Project.
+        <br />
+        Not Affiliated with any Streaming Service.
+      </footer>
     </div>
   );
 }
