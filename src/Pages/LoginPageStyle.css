@@ -1,6 +1,5 @@
-/* ===== Login Page Styling ===== */
+/* ====================== BACKGROUND (same as v1, kept safe) ====================== */
 
-/* ===== Login Page Background (Mobile Safe) ===== */
 .login-container {
   position: relative;
   min-height: 100vh;
@@ -8,26 +7,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Prevents white edges */
+  overflow: hidden;
 }
 
-/* Fullscreen animated background layer */
 .login-container::before {
   content: "";
   position: absolute;
   inset: 0;
-
   background: url("../assets/LoginPageBG.png") no-repeat center center;
   background-size: cover;
-
-  /* Cinematic zoom animation */
   animation: bgZoom 18s ease-in-out infinite;
 
-  /* push under content */
-  z-index: -1;
+  /* Slight dim for clarity */
+  filter: brightness(0.75);
+
+  z-index: -2;
 }
 
-/* Zoom animation */
 @keyframes bgZoom {
   0% {
     transform: scale(1.05);
@@ -40,184 +36,258 @@
   }
 }
 
-/* Fade-in effect (optional) */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
+/* ====================== NEW 2.0 SPOTLIGHT LAYER ====================== */
+
+.login-container::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+
+  /* Almost fully transparent glow */
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 255, 0.03),
+    /* extremely faint aqua */ rgba(0, 0, 0, 0)
+  );
+
+  filter: blur(150px); /* smoothest blur */
+  opacity: 0.08; /* almost invisible */
+
+  animation: spotlightMove 20s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes spotlightMove {
+  0% {
+    transform: translate(-150px, -150px);
   }
-  to {
+  100% {
+    transform: translate(150px, 180px);
+  }
+}
+
+/* ====================== LOGIN CARD — Professional Clean ====================== */
+
+.login-card {
+  width: 450px;
+  padding: 45px 45px;
+  border-radius: 22px;
+
+  /* Clean, high-clarity background */
+  background: rgba(10, 12, 20, 0.78);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+
+  position: relative;
+  overflow: hidden;
+
+  /* Simple soft shadow */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+/* Remove 3D Hover */
+.login-card:hover {
+  transform: none;
+}
+
+.login-card {
+  animation: fadeInCard 0.7s ease-out;
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  100% {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-.login-card {
-  width: px;
-  background: rgba(0, 0, 0, 0.65);
-  border-radius: 20px;
-  padding: 40px 30px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* ====================== CLEAN BORDER (STATIC, NO ROTATION) ====================== */
+
+.login-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+
+  /* Static soft gradient border */
+  border: 2px solid rgba(120, 180, 255, 0.35);
+
+  pointer-events: none;
 }
 
-.login-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
-}
+/* ====================== TITLE ====================== */
 
-/* Movie Explorer title - same color, enhanced style */
 .login-title {
   font-family: "Times New Roman", serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  display: inline-block;
-  color: rgb(255, 115, 0);
+  font-size: 32px;
+  font-weight: 800;
 
-  /* Gentle float animation */
-  animation: titleFloat 3s ease-in-out infinite;
-}
-
-@keyframes titleFloat {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-/* Interactive animated "Login" text */
-.login-subtitle {
-  font-family: "Times New Roman", serif;
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
-
-  /* Animated gradient */
-  background: linear-gradient(
-    90deg,
-    #00eaff,
-    #00c6ff,
-    #009dff,
-    #00c6ff,
-    #00eaff
-  );
-  background-size: 300%;
-  background-clip: text;
-  -webkit-background-clip: text;
+  /* Premium gold gradient */
+  background: linear-gradient(90deg, #ffd26a, #ffca47, #ffdf82);
+  background-clip: text; /* Standard */
+  -webkit-background-clip: text; /* Chrome, Safari */
   color: transparent;
 
-  /* Glow */
-  text-shadow: 0 0 6px rgba(0, 200, 255, 0.35), 0 0 12px rgba(0, 170, 255, 0.25);
-
-  /* Animation */
-  animation: neonFlow 4s ease-in-out infinite;
+  letter-spacing: 1.3px;
+  margin-bottom: 5px;
 }
 
-@keyframes neonFlow {
-  0% {
-    background-position: 0%;
-  }
-  50% {
-    background-position: 150%;
-  }
-  100% {
-    background-position: 0%;
-  }
+/* Subtitle */
+.login-subtitle {
+  font-family: "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: aqua;
+  margin-bottom: 28px;
 }
 
-/* Input Styling */
+/* ====================== INPUT FIELDS ====================== */
+
 .login-card input {
   width: 100%;
-  padding: 12px 15px;
-  margin: 12px 0;
+  padding: 13px 16px;
+  margin: 14px 0;
   border-radius: 12px;
-  border: none;
-  font-size: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  outline: none;
-  transition: 0.3s;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #f3feff;
+  transition: 0.25s ease;
 }
 
 .login-card input:focus {
-  background: rgba(255, 255, 255, 0.2);
+  border-color: #00caff;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(0, 180, 255, 0.35);
 }
 
-/* Placeholder */
-.login-card input::placeholder {
-  color: #ddd;
-}
-
-/* Password Wrapper */
+/* Eye Icon */
 .password-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.password-wrapper input {
-  flex: 1;
-  padding-right: 40px;
 }
 
 .eye-icon {
   position: absolute;
-  right: 12px;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  user-select: none;
-  font-size: 18px;
-  color: #fff;
-  transition: transform 0.2s;
+  font-size: 19px;
+  color: #ffffff;
+  transition: 0.25s ease;
 }
 
 .eye-icon:hover {
-  transform: scale(1.2);
+  transform: translateY(-50%) scale(1.15);
 }
 
-/* Button */
+/* ====================== BUTTON (Minimal, Clean) ====================== */
+
 .login-card button {
   width: 100%;
-  padding: 12px;
-  margin-top: 15px;
-  border-radius: 12px;
+  padding: 13px;
+  margin-top: 22px;
+
+  background: linear-gradient(135deg, #69a9ff, #417bff);
+  color: white;
+
   border: none;
-  background: #ff4c60;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+  border-radius: 14px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  transition: 0.25s ease;
 }
 
 .login-card button:hover {
-  background: #ff2a45;
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #7bb8ff, #4f89ff);
 }
 
-/* Error Text */
+/* Smooth Shimmer Hover Effect */
+.login-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  transition: 0.6s ease;
+  pointer-events: none;
+}
+
+/* On Hover → shimmer moves across */
+.login-card:hover::after {
+  left: 100%;
+}
+
+/* ====================== ERROR TEXT ====================== */
+
 .error-text {
-  color: #ff6b6b;
-  margin-top: 12px;
-  font-weight: 500;
+  margin-top: 18px;
+  color: #ff8b8b;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
-/* Animations */
-@keyframes fadeIn {
+.footer-note {
+  font-family: "Times New Roman", Times, serif;
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 14px;
+  color: #e8f1ff; /* soft white-blue */
+  opacity: 0.85;
+  text-align: center;
+  line-height: 1.45;
+
+  padding: 8px 20px;
+  border-radius: 14px;
+
+  /* subtle glass look */
+  background: rgba(20, 26, 40, 0.45);
+  backdrop-filter: blur(12px) saturate(150%);
+
+  /* premium soft glow */
+  box-shadow: 0 0 10px rgba(120, 160, 255, 0.35),
+    0 0 25px rgba(80, 130, 255, 0.2);
+
+  /* smooth fade-in */
+  animation: footerFade 1.8s ease-out;
+}
+
+@keyframes footerFade {
   0% {
     opacity: 0;
-    transform: scale(0.95);
+    transform: translateX(-50%) translateY(10px);
   }
   100% {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 0.85;
+    transform: translateX(-50%) translateY(0);
   }
+}
+
+.footer-note:hover {
+  color: orangered;
+  border-color: #00caff;
 }

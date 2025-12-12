@@ -41,35 +41,45 @@ function LoginPage() {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <h1 className="login-title">🎬Movie Explorer📽️</h1>
-        <br></br>
-        <h2 className="login-subtitle">Login</h2>
+    <div className="login-page">
+      <div className="login-container">
+        <div className="login-card">
+          <h1 className="main-title">
+            🎬 <span className="login-title">Movie Explorer</span> 📽️
+          </h1>
+          <br></br>
+          <h2 className="login-subtitle">Login</h2>
 
-        <input
-          type="email"
-          placeholder="Enter Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <div className="password-wrapper">
           <input
-            type={showPassword ? "text" : "password"}
-            placeholder="Enter Password"
-            onChange={(e) => setPassword(e.target.value)}
+            type="email"
+            placeholder="Enter Email"
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <span
-            className="eye-icon"
-            onClick={() => setShowPassword(!showPassword)}
-          >
-            {showPassword ? "🙈" : "👁️"}
-          </span>
-        </div>
 
-        <button onClick={login}>Login</button>
-        {error && <p className="error-text">{error}</p>}
+          <div className="password-wrapper">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Enter Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <span
+              className="eye-icon"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? "🙈" : "👁️"}
+            </span>
+          </div>
+
+          <button onClick={login}>Login</button>
+          {error && <p className="error-text">{error}</p>}
+        </div>
       </div>
+      {/* FOOTER FIXED AT BOTTOM */}
+      <p className="footer-note">
+        © 2025 Movie Explorer — Personal Project.
+        <br />
+        Not Affiliated with any Streaming Service.
+      </p>
     </div>
   );
 }
